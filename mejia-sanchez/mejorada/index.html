@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pokédex Mejorada</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <h1>Buscador Pokédex</h1>
+
+      <!-- Barra de búsqueda por NOMBRE -->
+      <form id="formName" class="search" autocomplete="off">
+        <input id="nameInput" type="text" placeholder="Escribe el nombre del Pokémon" />
+        <button id="nameBtn" type="submit">Buscar por nombre</button>
+      </form>
+
+      <!-- Barra de búsqueda por ID -->
+      <form id="formId" class="search" autocomplete="off">
+        <input id="idInput" type="number" min="1" step="1" placeholder="Escribe el ID del Pokémon (número)" />
+        <button id="idBtn" type="submit">Buscar por ID</button>
+      </form>
+
+      <!-- Resultado -->
+      <section id="resultCard" class="result">
+        <h2 id="title">Pokémon Inicial (Pikachu)</h2>
+        <p id="pokemonName" class="name">pikachu</p>
+        <img id="pokemonImg" alt="Imagen del Pokémon" />
+        <ul id="meta" class="meta">
+          <!-- Se llena dinámicamente -->
+        </ul>
+        <div id="status" class="status"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
